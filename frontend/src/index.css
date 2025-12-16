@@ -1,0 +1,79 @@
+@import "tailwindcss";
+
+@layer utilities {
+   @keyframes fadeIn {
+      from {
+         opacity: 0;
+         transform: translateY(20px);
+      }
+
+      to {
+         opacity: 1;
+         transform: translateY(0);
+      }
+   }
+
+   @keyframes slideUp {
+      from {
+         transform: translateY(20px);
+         opacity: 0;
+      }
+
+      to {
+         transform: translateY(0);
+         opacity: 1;
+      }
+   }
+
+   @keyframes slideDownFadeIn {
+      0% {
+         opacity: 0;
+         transform: translateY(-12px);
+      }
+
+      100% {
+         opacity: 1;
+         transform: translateY(0);
+      }
+   }
+
+   .animate-fadeIn {
+      animation: fadeIn 0.6s ease-in-out forwards;
+   }
+
+   .animate-slideUp {
+      animation: slideUp 0.6s ease forwards;
+   }
+
+   .animate-slideDownFadeIn {
+      animation: slideDownFadeIn 0.5s ease forwards;
+   }
+
+   @keyframes gradientAnimation {
+      0% {
+         background-position: 0% 50%;
+      }
+
+      50% {
+         background-position: 100% 50%;
+      }
+
+      100% {
+         background-position: 0% 50%;
+      }
+   }
+
+   @keyframes iconPulse {
+
+      0%,
+      100% {
+         transform: scale(1);
+         opacity: 1;
+      }
+
+      50% {
+         transform: scale(1.1);
+         opacity: 0.85;
+      }
+   }
+}
