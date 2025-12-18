@@ -133,7 +133,3 @@ Contributions are welcome! If you'd like to improve features, fix bugs, or optim
 3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`).
 4. Push to the Branch (`git push origin feature/AmazingFeature`).
 5. Open a Pull Request.
-
-## 📝 License
-
-Distributed under the ISC License. See `LICENSE` for more information.
