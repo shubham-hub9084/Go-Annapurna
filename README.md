@@ -1,6 +1,6 @@
 # Go-Annapurna - Authentic Indian Food Delivery Application 🍛
 
-Go-Annapurna is a robust, full-stack web application designed to deliver the authentic flavors of India directly to your doorstep. Built with the **MERN Stack** (MongoDB, Express, React, Node.js), it creates a seamless and visually stunning food ordering experience. This project showcases modern web development practices, responsive design, and state management.
+Go-Annapurna is a robust, full-stack web application designed to deliver the authentic flavors of India directly to your doorstep. Built with the , it creates a seamless and visually stunning food ordering experience. This project showcases modern web development practices, responsive design, and state management.
 
 ## 🚀 Features
 
