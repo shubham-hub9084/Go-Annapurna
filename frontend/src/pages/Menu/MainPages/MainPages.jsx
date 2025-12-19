@@ -85,7 +85,7 @@ const MainPages = () => {
     <div className="w-full relative min-h-screen pb-20">
 
       {/* Sticky Filter Bar */}
-      <div className="sticky top-20 z-40 bg-white/90 backdrop-blur-md shadow-sm border-b border-gray-100 py-4 mb-8">
+      <div className="sticky top-20 z-40 bg-white/90 dark:bg-background/90 backdrop-blur-md shadow-sm border-b border-gray-100 dark:border-border py-4 mb-8">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-4">
 
           {/* Horizontal Categories */}
@@ -97,8 +97,8 @@ const MainPages = () => {
                 className={`
                     flex items-center gap-2 px-4 py-2 rounded-full text-sm font-semibold transition-all duration-200 whitespace-nowrap
                     ${selectedCategory === cat.id
-                    ? "bg-gray-900 text-white shadow-lg scale-105"
-                    : "bg-gray-100 text-gray-600 hover:bg-gray-200 hover:text-gray-900"}
+                    ? "bg-gray-900 dark:bg-white text-white dark:text-gray-900 shadow-lg scale-105"
+                    : "bg-gray-100 dark:bg-muted text-gray-600 dark:text-muted-foreground hover:bg-gray-200 dark:hover:bg-muted/80 hover:text-gray-900 dark:hover:text-foreground"}
                   `}
               >
                 {cat.name}
@@ -113,9 +113,9 @@ const MainPages = () => {
               placeholder="Search menu..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              className="w-full pl-10 pr-4 py-2 bg-gray-100 border-none rounded-full text-sm focus:ring-2 focus:ring-orange-500 focus:bg-white transition-all outline-none"
+              className="w-full pl-10 pr-4 py-2 bg-gray-100 dark:bg-muted border-none rounded-full text-sm focus:ring-2 focus:ring-orange-500 focus:bg-white dark:focus:bg-card transition-all outline-none dark:text-foreground"
             />
-            <RiSearchLine className="absolute left-3.5 top-2.5 text-gray-400" />
+            <RiSearchLine className="absolute left-3.5 top-2.5 text-gray-400 dark:text-muted-foreground" />
           </div>
         </div>
       </div>
@@ -134,11 +134,11 @@ const MainPages = () => {
               <motion.div
                 variants={itemVariants}
                 layout
-                className="bg-white rounded-2xl p-3 shadow-sm border border-gray-100/50 hover:shadow-xl hover:border-orange-100 transition-all duration-300 group flex flex-col"
+                className="bg-white dark:bg-card rounded-2xl p-3 shadow-sm border border-gray-100/50 dark:border-border hover:shadow-xl hover:border-orange-100 dark:hover:border-orange-900/30 transition-all duration-300 group flex flex-col"
                 key={item.id}
               >
                 {/* Image Area */}
-                <div className="relative w-full aspect-[4/3] rounded-xl overflow-hidden mb-3 bg-gray-50">
+                <div className="relative w-full aspect-[4/3] rounded-xl overflow-hidden mb-3 bg-gray-50 dark:bg-muted">
                   <motion.img
                     whileHover={{ scale: 1.05 }}
                     transition={{ duration: 0.4 }}
@@ -153,12 +153,12 @@ const MainPages = () => {
                       e.stopPropagation();
                       handleToggleWishlist(item);
                     }}
-                    className="absolute top-2 right-2 w-8 h-8 rounded-full bg-white/90 backdrop-blur-sm flex items-center justify-center shadow-md hover:scale-110 transition-transform z-10"
+                    className="absolute top-2 right-2 w-8 h-8 rounded-full bg-white/90 dark:bg-black/50 backdrop-blur-sm flex items-center justify-center shadow-md hover:scale-110 transition-transform z-10"
                   >
                     {isInWishlist(item.id) ? (
                       <RiHeartFill className="text-red-500 text-lg" />
                     ) : (
-                      <RiHeartLine className="text-gray-500 text-lg hover:text-red-500" />
+                      <RiHeartLine className="text-gray-500 dark:text-muted-foreground text-lg hover:text-red-500" />
                     )}
                   </button>
                 </div>
@@ -166,14 +166,14 @@ const MainPages = () => {
                 {/* Content */}
                 <div className="flex flex-col flex-grow px-1">
                   <div className="flex justify-between items-start gap-2 mb-1">
-                    <h3 className="font-bold text-gray-800 text-base leading-tight line-clamp-1">{item.name}</h3>
+                    <h3 className="font-bold text-foreground text-base leading-tight line-clamp-1">{item.name}</h3>
                     <VegIcon type={item.dietary} />
                   </div>
 
-                  <p className="text-xs text-gray-500 leading-relaxed line-clamp-2 mb-4 h-8">{item.description}</p>
+                  <p className="text-xs text-muted-foreground leading-relaxed line-clamp-2 mb-4 h-8">{item.description}</p>
 
-                  <div className="mt-auto flex items-center justify-between border-t border-gray-50 pt-3">
-                    <span className="text-lg font-bold text-gray-900">₹{item.price}</span>
+                  <div className="mt-auto flex items-center justify-between border-t border-gray-50 dark:border-border pt-3">
+                    <span className="text-lg font-bold text-foreground">₹{item.price}</span>
 
                     <motion.button
                       whileTap={{ scale: 0.9 }}
@@ -193,7 +193,7 @@ const MainPages = () => {
         {filteredItems.length === 0 && (
           <div className="text-center py-24 opacity-60">
             <div className="text-6xl mb-4">🍽️</div>
-            <p className="text-gray-500 text-lg font-medium">No dishes found</p>
+            <p className="text-muted-foreground text-lg font-medium">No dishes found</p>
           </div>
         )}
       </div>

@@ -9,10 +9,10 @@ function Footer() {
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
-            className="bg-[#242a36] text-[#e4ecf6] w-full font-sans pt-16 pb-8"
+            className="bg-[#242a36] dark:bg-card text-[#e4ecf6] dark:text-foreground w-full font-sans pt-16 pb-8"
         >
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 px-4">
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 border-b border-[#33384b] pb-12">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 border-b border-[#33384b] dark:border-border pb-12">
                     {/* Brand Section */}
                     <div className="flex flex-col items-start gap-4">
                         <span className="text-3xl font-extrabold text-[#f46a1c] select-none">
@@ -34,7 +34,7 @@ function Footer() {
                                 <li key={item}>
                                     <a
                                         href="#"
-                                        className="text-gray-300 hover:text-[#f46a1c] transition-colors duration-200 text-sm font-medium flex items-center gap-2 group"
+                                        className="text-gray-300 dark:text-muted-foreground hover:text-[#f46a1c] transition-colors duration-200 text-sm font-medium flex items-center gap-2 group"
                                     >
                                         <span className="w-0 overflow-hidden group-hover:w-2 transition-all duration-300">›</span>
                                         {item}

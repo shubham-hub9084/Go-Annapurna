@@ -14,7 +14,7 @@ const Menu = () => {
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
       transition={{ duration: 0.5 }}
-      className="w-full min-h-screen bg-gray-50 pt-20"
+      className="w-full min-h-screen bg-gray-50 dark:bg-background pt-20"
     >
       {/* Featured Section */}
       <FeaturedFoodSlider />

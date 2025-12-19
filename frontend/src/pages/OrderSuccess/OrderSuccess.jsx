@@ -12,12 +12,12 @@ const OrderSuccess = () => {
     // useEffect(() => { dispatch(clearCart()); }, []);
 
     return (
-        <div className="min-h-screen bg-white flex flex-col items-center justify-center p-4">
+        <div className="min-h-screen bg-background flex flex-col items-center justify-center p-4">
             <motion.div
                 initial={{ scale: 0.5, opacity: 0 }}
                 animate={{ scale: 1, opacity: 1 }}
                 transition={{ type: "spring", stiffness: 200, damping: 20 }}
-                className="w-24 h-24 bg-green-100 rounded-full flex items-center justify-center mb-8"
+                className="w-24 h-24 bg-green-100 dark:bg-green-900/20 rounded-full flex items-center justify-center mb-8"
             >
                 <motion.div
                     initial={{ scale: 0 }}
@@ -33,7 +33,7 @@ const OrderSuccess = () => {
                 initial={{ y: 20, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
                 transition={{ delay: 0.3 }}
-                className="text-4xl font-bold text-gray-900 mb-4 text-center"
+                className="text-4xl font-bold text-foreground mb-4 text-center"
             >
                 Order Placed Successfully!
             </motion.h1>
@@ -42,7 +42,7 @@ const OrderSuccess = () => {
                 initial={{ y: 20, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
                 transition={{ delay: 0.4 }}
-                className="text-gray-500 text-lg mb-12 text-center max-w-md"
+                className="text-muted-foreground text-lg mb-12 text-center max-w-md"
             >
                 Thank you for choosing Go Annapurna. Your delicious meal is being prepared with love and will reach you shortly.
             </motion.p>
@@ -55,7 +55,7 @@ const OrderSuccess = () => {
             >
                 <Link
                     to="/"
-                    className="flex-1 flex items-center justify-center gap-2 py-4 rounded-xl border-2 border-gray-100 text-gray-700 font-bold hover:border-gray-200 hover:bg-gray-50 transition-all"
+                    className="flex-1 flex items-center justify-center gap-2 py-4 rounded-xl border-2 border-gray-100 dark:border-border text-foreground font-bold hover:border-gray-200 dark:hover:border-muted hover:bg-gray-50 dark:hover:bg-muted transition-all"
                 >
                     <RiHome4Line /> Return Home
                 </Link>
@@ -67,7 +67,7 @@ const OrderSuccess = () => {
                 </Link>
             </motion.div>
 
-            <p className="mt-12 text-sm text-gray-400">Order ID: #GA-{Math.floor(100000 + Math.random() * 900000)}</p>
+            <p className="mt-12 text-sm text-muted-foreground">Order ID: #GA-{Math.floor(100000 + Math.random() * 900000)}</p>
         </div>
     );
 };

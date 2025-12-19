@@ -17,7 +17,7 @@ const About = () => {
     ];
 
     return (
-        <div className="w-full min-h-screen bg-white">
+        <div className="w-full min-h-screen bg-background">
             {/* Hero Section */}
             <div className="relative h-[60vh] w-full flex items-center justify-center overflow-hidden">
                 <div
@@ -66,19 +66,19 @@ const About = () => {
                         transition={{ duration: 0.8, delay: 0.2 }}
                     >
                         <h2 className="text-orange-600 font-bold uppercase tracking-widest text-sm mb-4">Who We Are</h2>
-                        <h3 className="text-4xl font-bold text-gray-900 mb-6 leading-tight">Rooted in Tradition, <br />Driven by Passion</h3>
-                        <p className="text-gray-600 text-lg mb-6 leading-relaxed">
+                        <h3 className="text-4xl font-bold text-foreground mb-6 leading-tight">Rooted in Tradition, <br />Driven by Passion</h3>
+                        <p className="text-muted-foreground text-lg mb-6 leading-relaxed">
                             Go Annapurna wasn't just built to sell food; it was created to share a culture. Founded by a family of passionate food lovers, we believed that authentic Indian cuisine is an art form that deserves to be experienced in its purest form.
                         </p>
-                        <p className="text-gray-600 text-lg mb-8 leading-relaxed">
+                        <p className="text-muted-foreground text-lg mb-8 leading-relaxed">
                             From the bustling streets of Mumbai via our Vada Pav to the royal kitchens of Lucknow via our Biryanis, every dish we serve tells a story of heritage, spices, and love.
                         </p>
 
                         <div className="grid grid-cols-2 gap-8">
                             {stats.map((stat, idx) => (
                                 <div key={idx} className="border-l-4 border-orange-500 pl-4">
-                                    <h4 className="text-3xl font-bold text-gray-900 mb-1">{stat.value}</h4>
-                                    <p className="text-sm text-gray-500 font-medium uppercase tracking-wide">{stat.label}</p>
+                                    <h4 className="text-3xl font-bold text-foreground mb-1">{stat.value}</h4>
+                                    <p className="text-sm text-muted-foreground font-medium uppercase tracking-wide">{stat.label}</p>
                                 </div>
                             ))}
                         </div>
@@ -87,11 +87,11 @@ const About = () => {
             </section>
 
             {/* Values Section */}
-            <section className="bg-gray-50 py-24">
+            <section className="bg-gray-50 dark:bg-muted/30 py-24">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="text-center max-w-3xl mx-auto mb-16">
-                        <h2 className="text-4xl font-bold text-gray-900 mb-4">The Go Annapurna Standard</h2>
-                        <p className="text-lg text-gray-600">We refuse to compromise on quality. Here is what makes every bite special.</p>
+                        <h2 className="text-4xl font-bold text-foreground mb-4">The Go Annapurna Standard</h2>
+                        <p className="text-lg text-muted-foreground">We refuse to compromise on quality. Here is what makes every bite special.</p>
                     </div>
 
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
@@ -106,13 +106,13 @@ const About = () => {
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true }}
                                 transition={{ delay: idx * 0.2, duration: 0.6 }}
-                                className="bg-white p-10 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 text-center group border border-gray-100"
+                                className="bg-white dark:bg-card p-10 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 text-center group border border-gray-100 dark:border-border"
                             >
-                                <div className="w-16 h-16 mx-auto bg-orange-50 text-orange-600 rounded-full flex items-center justify-center text-3xl mb-6 group-hover:bg-orange-600 group-hover:text-white transition-colors duration-300">
+                                <div className="w-16 h-16 mx-auto bg-orange-50 dark:bg-orange-900/20 text-orange-600 rounded-full flex items-center justify-center text-3xl mb-6 group-hover:bg-orange-600 group-hover:text-white transition-colors duration-300">
                                     {item.icon}
                                 </div>
-                                <h3 className="text-xl font-bold text-gray-900 mb-4">{item.title}</h3>
-                                <p className="text-gray-600 leading-relaxed">{item.desc}</p>
+                                <h3 className="text-xl font-bold text-foreground mb-4">{item.title}</h3>
+                                <p className="text-muted-foreground leading-relaxed">{item.desc}</p>
                             </motion.div>
                         ))}
                     </div>

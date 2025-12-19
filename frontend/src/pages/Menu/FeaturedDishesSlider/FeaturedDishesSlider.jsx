@@ -76,7 +76,7 @@ const FeaturedDishesSlider = () => {
   return (
     <section className="py-6 bg-transparent w-full">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="relative w-full h-[400px] md:h-[450px] rounded-2xl overflow-hidden shadow-xl border border-gray-100/50">
+        <div className="relative w-full h-[400px] md:h-[450px] rounded-2xl overflow-hidden shadow-xl border border-gray-100/50 dark:border-border">
           <AnimatePresence mode="wait">
             {featuredDishes.map((dish, index) => {
               let positionClass = "opacity-0 pointer-events-none z-0";

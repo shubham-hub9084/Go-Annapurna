@@ -9,7 +9,7 @@ const Contact = () => {
     }, []);
 
     return (
-        <div className="w-full min-h-screen bg-white">
+        <div className="w-full min-h-screen bg-background">
             {/* Hero Section */}
             <div className="relative h-[50vh] w-full flex items-center justify-center overflow-hidden">
                 <div
@@ -46,52 +46,52 @@ const Contact = () => {
                         className="space-y-12"
                     >
                         <div>
-                            <h2 className="text-4xl font-bold text-gray-900 mb-6">Visit Our Kitchen</h2>
-                            <p className="text-gray-600 text-lg leading-relaxed mb-8">
+                            <h2 className="text-4xl font-bold text-foreground mb-6">Visit Our Kitchen</h2>
+                            <p className="text-muted-foreground text-lg leading-relaxed mb-8">
                                 Experience the aroma of fresh spices and the warmth of our hospitality. Drop by for a meal or just say hello!
                             </p>
                         </div>
 
                         <div className="grid gap-8">
                             <div className="flex items-start gap-6 group">
-                                <div className="w-14 h-14 bg-orange-50 text-orange-600 rounded-full flex items-center justify-center text-2xl group-hover:bg-orange-600 group-hover:text-white transition-colors duration-300 shrink-0">
+                                <div className="w-14 h-14 bg-orange-50 dark:bg-orange-900/20 text-orange-600 rounded-full flex items-center justify-center text-2xl group-hover:bg-orange-600 group-hover:text-white transition-colors duration-300 shrink-0">
                                     <RiMapPinLine />
                                 </div>
                                 <div>
-                                    <h3 className="text-xl font-bold text-gray-900 mb-2">Location</h3>
-                                    <p className="text-gray-600">123 Marvel , <br />Thanos Home, Titan - 560038</p>
+                                    <h3 className="text-xl font-bold text-foreground mb-2">Location</h3>
+                                    <p className="text-muted-foreground">123 Marvel , <br />Thanos Home, Titan - 560038</p>
                                 </div>
                             </div>
 
                             <div className="flex items-start gap-6 group">
-                                <div className="w-14 h-14 bg-orange-50 text-orange-600 rounded-full flex items-center justify-center text-2xl group-hover:bg-orange-600 group-hover:text-white transition-colors duration-300 shrink-0">
+                                <div className="w-14 h-14 bg-orange-50 dark:bg-orange-900/20 text-orange-600 rounded-full flex items-center justify-center text-2xl group-hover:bg-orange-600 group-hover:text-white transition-colors duration-300 shrink-0">
                                     <RiPhoneLine />
                                 </div>
                                 <div>
-                                    <h3 className="text-xl font-bold text-gray-900 mb-2">Phone</h3>
-                                    <p className="text-gray-600 cursor-pointer hover:text-orange-600 transition-colors">+91 98765 43210</p>
-                                    <p className="text-gray-600 cursor-pointer hover:text-orange-600 transition-colors">+91 80 1234 5678</p>
+                                    <h3 className="text-xl font-bold text-foreground mb-2">Phone</h3>
+                                    <p className="text-muted-foreground cursor-pointer hover:text-orange-600 transition-colors">+91 98765 43210</p>
+                                    <p className="text-muted-foreground cursor-pointer hover:text-orange-600 transition-colors">+91 80 1234 5678</p>
                                 </div>
                             </div>
 
                             <div className="flex items-start gap-6 group">
-                                <div className="w-14 h-14 bg-orange-50 text-orange-600 rounded-full flex items-center justify-center text-2xl group-hover:bg-orange-600 group-hover:text-white transition-colors duration-300 shrink-0">
+                                <div className="w-14 h-14 bg-orange-50 dark:bg-orange-900/20 text-orange-600 rounded-full flex items-center justify-center text-2xl group-hover:bg-orange-600 group-hover:text-white transition-colors duration-300 shrink-0">
                                     <RiMailLine />
                                 </div>
                                 <div>
-                                    <h3 className="text-xl font-bold text-gray-900 mb-2">Email</h3>
-                                    <p className="text-gray-600 cursor-pointer hover:text-orange-600 transition-colors">hello@goannapurna.com</p>
-                                    <p className="text-gray-600 cursor-pointer hover:text-orange-600 transition-colors">bookings@goannapurna.com</p>
+                                    <h3 className="text-xl font-bold text-foreground mb-2">Email</h3>
+                                    <p className="text-muted-foreground cursor-pointer hover:text-orange-600 transition-colors">hello@goannapurna.com</p>
+                                    <p className="text-muted-foreground cursor-pointer hover:text-orange-600 transition-colors">bookings@goannapurna.com</p>
                                 </div>
                             </div>
 
                             <div className="flex items-start gap-6 group">
-                                <div className="w-14 h-14 bg-orange-50 text-orange-600 rounded-full flex items-center justify-center text-2xl group-hover:bg-orange-600 group-hover:text-white transition-colors duration-300 shrink-0">
+                                <div className="w-14 h-14 bg-orange-50 dark:bg-orange-900/20 text-orange-600 rounded-full flex items-center justify-center text-2xl group-hover:bg-orange-600 group-hover:text-white transition-colors duration-300 shrink-0">
                                     <RiTimeLine />
                                 </div>
                                 <div>
-                                    <h3 className="text-xl font-bold text-gray-900 mb-2">Opening Hours</h3>
-                                    <p className="text-gray-600">Mon - Sun: 11:00 AM - 11:00 PM</p>
+                                    <h3 className="text-xl font-bold text-foreground mb-2">Opening Hours</h3>
+                                    <p className="text-muted-foreground">Mon - Sun: 11:00 AM - 11:00 PM</p>
                                     <span className="inline-block mt-2 px-3 py-1 bg-green-100 text-green-700 text-xs font-bold rounded-full">Open Now</span>
                                 </div>
                             </div>
@@ -104,29 +104,29 @@ const Contact = () => {
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true }}
                         transition={{ duration: 0.8 }}
-                        className="bg-gray-50 p-10 rounded-3xl border border-gray-100 shadow-xl"
+                        className="bg-gray-50 dark:bg-muted/10 p-10 rounded-3xl border border-gray-100 dark:border-border shadow-xl"
                     >
-                        <h3 className="text-2xl font-bold text-gray-900 mb-8">Send us a Message</h3>
+                        <h3 className="text-2xl font-bold text-foreground mb-8">Send us a Message</h3>
                         <form className="space-y-6">
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                                 <div className="space-y-2">
-                                    <label className="text-sm font-bold text-gray-700">First Name</label>
-                                    <input type="text" className="w-full px-4 py-3 rounded-xl bg-white border border-gray-200 focus:border-orange-500 focus:ring-2 focus:ring-orange-200 outline-none transition-all" placeholder="Shubham" />
+                                    <label className="text-sm font-bold text-muted-foreground">First Name</label>
+                                    <input type="text" className="w-full px-4 py-3 rounded-xl bg-white dark:bg-card border border-gray-200 dark:border-border text-foreground focus:border-orange-500 focus:ring-2 focus:ring-orange-200 outline-none transition-all" placeholder="Shubham" />
                                 </div>
                                 <div className="space-y-2">
-                                    <label className="text-sm font-bold text-gray-700">Last Name</label>
-                                    <input type="text" className="w-full px-4 py-3 rounded-xl bg-white border border-gray-200 focus:border-orange-500 focus:ring-2 focus:ring-orange-200 outline-none transition-all" placeholder="Sahu" />
+                                    <label className="text-sm font-bold text-muted-foreground">Last Name</label>
+                                    <input type="text" className="w-full px-4 py-3 rounded-xl bg-white dark:bg-card border border-gray-200 dark:border-border text-foreground focus:border-orange-500 focus:ring-2 focus:ring-orange-200 outline-none transition-all" placeholder="Sahu" />
                                 </div>
                             </div>
 
                             <div className="space-y-2">
-                                <label className="text-sm font-bold text-gray-700">Email Address</label>
-                                <input type="email" className="w-full px-4 py-3 rounded-xl bg-white border border-gray-200 focus:border-orange-500 focus:ring-2 focus:ring-orange-200 outline-none transition-all" placeholder="shahu@example.com" />
+                                <label className="text-sm font-bold text-muted-foreground">Email Address</label>
+                                <input type="email" className="w-full px-4 py-3 rounded-xl bg-white dark:bg-card border border-gray-200 dark:border-border text-foreground focus:border-orange-500 focus:ring-2 focus:ring-orange-200 outline-none transition-all" placeholder="shahu@example.com" />
                             </div>
 
                             <div className="space-y-2">
-                                <label className="text-sm font-bold text-gray-700">Message</label>
-                                <textarea rows="4" className="w-full px-4 py-3 rounded-xl bg-white border border-gray-200 focus:border-orange-500 focus:ring-2 focus:ring-orange-200 outline-none transition-all resize-none" placeholder=" Tell us about your experience..." />
+                                <label className="text-sm font-bold text-muted-foreground">Message</label>
+                                <textarea rows="4" className="w-full px-4 py-3 rounded-xl bg-white dark:bg-card border border-gray-200 dark:border-border text-foreground focus:border-orange-500 focus:ring-2 focus:ring-orange-200 outline-none transition-all resize-none" placeholder=" Tell us about your experience..." />
                             </div>
 
                             <button className="w-full bg-orange-600 text-white font-bold py-4 rounded-xl shadow-lg shadow-orange-200 hover:bg-orange-700 hover:shadow-xl transition-all flex items-center justify-center gap-2">

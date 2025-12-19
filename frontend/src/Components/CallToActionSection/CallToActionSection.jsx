@@ -6,7 +6,7 @@ import { RiRestaurantLine, RiPhoneFill } from 'react-icons/ri';
 function CallToActionSection() {
   const navigate = useNavigate();
   return (
-    <section className="w-full py-20 bg-gradient-to-r from-[#fa1414] to-[#fb8c25] relative overflow-hidden">
+    <section className="w-full py-20 bg-gradient-to-r from-[#fa1414] to-[#fb8c25] dark:from-background dark:to-background relative overflow-hidden">
       {/* Abstract Background Shapes */}
       <div className="absolute top-0 left-0 w-full h-full opacity-10 pointer-events-none">
         <div className="absolute -top-24 -left-24 w-96 h-96 bg-white rounded-full blur-3xl"></div>
@@ -20,7 +20,7 @@ function CallToActionSection() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="text-4xl md:text-5xl font-extrabold text-white mb-6 tracking-tight drop-shadow-md"
+            className="text-4xl md:text-5xl font-extrabold text-white dark:text-foreground mb-6 tracking-tight drop-shadow-md"
           >
             Ready to Experience Authentic Indian Flavors?
           </motion.h2>
@@ -30,7 +30,7 @@ function CallToActionSection() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.2, duration: 0.6 }}
-            className="text-lg md:text-xl text-orange-50 mb-10 max-w-2xl leading-relaxed"
+            className="text-lg md:text-xl text-orange-50 dark:text-muted-foreground mb-10 max-w-2xl leading-relaxed"
           >
             Join thousands of satisfied customers who have made Go-Annapurna their favorite destination for delicious, traditional Indian cuisine.
           </motion.p>

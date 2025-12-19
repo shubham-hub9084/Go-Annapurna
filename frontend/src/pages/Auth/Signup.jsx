@@ -47,7 +47,7 @@ const Signup = () => {
     };
 
     return (
-        <div className="min-h-screen w-full flex bg-white">
+        <div className="min-h-screen w-full flex bg-background">
             {/* Left Side - Image */}
             <div className="hidden lg:flex w-1/2 relative bg-gray-900 overflow-hidden items-center justify-center">
                 <div
@@ -63,15 +63,15 @@ const Signup = () => {
             </div>
 
             {/* Right Side - Form */}
-            <div className="w-full lg:w-1/2 flex items-center justify-center p-8 sm:p-12 lg:p-24 bg-gray-50">
+            <div className="w-full lg:w-1/2 flex items-center justify-center p-8 sm:p-12 lg:p-24 bg-gray-50 dark:bg-background">
                 <motion.div
                     initial={{ opacity: 0, x: 20 }}
                     animate={{ opacity: 1, x: 0 }}
                     className="w-full max-w-md space-y-8"
                 >
                     <div className="text-center lg:text-left">
-                        <h2 className="text-3xl font-bold text-gray-900">Create your account</h2>
-                        <p className="mt-2 text-gray-600">
+                        <h2 className="text-3xl font-bold text-foreground">Create your account</h2>
+                        <p className="mt-2 text-muted-foreground">
                             Already have an account?{' '}
                             <Link to="/login" className="font-bold text-orange-600 hover:text-orange-500">
                                 Sign in
@@ -82,9 +82,9 @@ const Signup = () => {
                     <form className="mt-8 space-y-6" onSubmit={handleSignup}>
                         <div className="space-y-4">
                             <div className="relative">
-                                <label className="text-sm font-bold text-gray-700 mb-1 block">Full Name</label>
+                                <label className="text-sm font-bold text-muted-foreground mb-1 block">Full Name</label>
                                 <div className="relative">
-                                    <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none text-gray-400">
+                                    <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none text-muted-foreground">
                                         <RiUserLine />
                                     </div>
                                     <input
@@ -93,16 +93,16 @@ const Signup = () => {
                                         value={formData.name}
                                         onChange={handleChange}
                                         required
-                                        className="w-full pl-10 pr-4 py-3 rounded-xl border border-gray-200 focus:border-orange-500 focus:ring-2 focus:ring-orange-200 outline-none transition-all"
+                                        className="w-full pl-10 pr-4 py-3 rounded-xl bg-white dark:bg-card border border-gray-200 dark:border-border text-foreground focus:border-orange-500 focus:ring-2 focus:ring-orange-200 outline-none transition-all"
                                         placeholder="Shubham Sahu"
                                     />
                                 </div>
                             </div>
 
                             <div className="relative">
-                                <label className="text-sm font-bold text-gray-700 mb-1 block">Email Address</label>
+                                <label className="text-sm font-bold text-muted-foreground mb-1 block">Email Address</label>
                                 <div className="relative">
-                                    <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none text-gray-400">
+                                    <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none text-muted-foreground">
                                         <RiMailLine />
                                     </div>
                                     <input
@@ -111,16 +111,16 @@ const Signup = () => {
                                         value={formData.email}
                                         onChange={handleChange}
                                         required
-                                        className="w-full pl-10 pr-4 py-3 rounded-xl border border-gray-200 focus:border-orange-500 focus:ring-2 focus:ring-orange-200 outline-none transition-all"
+                                        className="w-full pl-10 pr-4 py-3 rounded-xl bg-white dark:bg-card border border-gray-200 dark:border-border text-foreground focus:border-orange-500 focus:ring-2 focus:ring-orange-200 outline-none transition-all"
                                         placeholder="name@example.com"
                                     />
                                 </div>
                             </div>
 
                             <div className="relative">
-                                <label className="text-sm font-bold text-gray-700 mb-1 block">Password</label>
+                                <label className="text-sm font-bold text-muted-foreground mb-1 block">Password</label>
                                 <div className="relative">
-                                    <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none text-gray-400">
+                                    <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none text-muted-foreground">
                                         <RiLockPasswordLine />
                                     </div>
                                     <input
@@ -129,13 +129,13 @@ const Signup = () => {
                                         value={formData.password}
                                         onChange={handleChange}
                                         required
-                                        className="w-full pl-10 pr-10 py-3 rounded-xl border border-gray-200 focus:border-orange-500 focus:ring-2 focus:ring-orange-200 outline-none transition-all"
+                                        className="w-full pl-10 pr-10 py-3 rounded-xl bg-white dark:bg-card border border-gray-200 dark:border-border text-foreground focus:border-orange-500 focus:ring-2 focus:ring-orange-200 outline-none transition-all"
                                         placeholder="Create a password"
                                     />
                                     <button
                                         type="button"
                                         onClick={() => setShowPassword(!showPassword)}
-                                        className="absolute inset-y-0 right-0 pr-3 flex items-center text-gray-400 hover:text-gray-600"
+                                        className="absolute inset-y-0 right-0 pr-3 flex items-center text-muted-foreground hover:text-foreground"
                                     >
                                         {showPassword ? <RiEyeOffLine /> : <RiEyeLine />}
                                     </button>
@@ -151,7 +151,7 @@ const Signup = () => {
                                 required
                                 className="h-4 w-4 text-orange-600 focus:ring-orange-500 border-gray-300 rounded"
                             />
-                            <label htmlFor="terms" className="ml-2 block text-sm text-gray-700">
+                            <label htmlFor="terms" className="ml-2 block text-sm text-muted-foreground">
                                 I agree to the <a href="#" className="font-bold text-orange-600 hover:text-orange-500">Terms of Service</a> and <a href="#" className="font-bold text-orange-600 hover:text-orange-500">Privacy Policy</a>
                             </label>
                         </div>
@@ -165,15 +165,15 @@ const Signup = () => {
 
                         <div className="relative">
                             <div className="absolute inset-0 flex items-center">
-                                <div className="w-full border-t border-gray-200"></div>
+                                <div className="w-full border-t border-gray-200 dark:border-border"></div>
                             </div>
                             <div className="relative flex justify-center text-sm">
-                                <span className="px-2 bg-gray-50 text-gray-500">Or sign up with</span>
+                                <span className="px-2 bg-gray-50 dark:bg-background text-muted-foreground">Or sign up with</span>
                             </div>
                         </div>
 
                         <div className="grid grid-cols-2 gap-4">
-                            <button type="button" className="w-full inline-flex justify-center py-3 px-4 rounded-xl shadow-sm bg-white text-sm font-medium text-gray-500 border border-gray-200 hover:bg-gray-50 transition-all">
+                            <button type="button" className="w-full inline-flex justify-center py-3 px-4 rounded-xl shadow-sm bg-white dark:bg-card text-sm font-medium text-muted-foreground border border-gray-200 dark:border-border hover:bg-gray-50 dark:hover:bg-muted transition-all">
                                 <RiGoogleFill className="text-xl text-red-500 mr-2" /> Google
                             </button>
                             <button type="button" className="w-full inline-flex justify-center py-3 px-4 rounded-xl shadow-sm bg-[#1877F2] text-sm font-medium text-white hover:bg-[#166fe5] transition-all">

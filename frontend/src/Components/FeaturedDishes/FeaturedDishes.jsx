@@ -58,14 +58,14 @@ const FeaturedDishes = () => {
   };
 
   return (
-    <section className="py-20 bg-white">
+    <section className="py-20 bg-background">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <motion.h2
             initial={{ opacity: 0, y: -20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-[2.5rem] font-bold text-[#2d3748] mb-4"
+            className="text-[2.5rem] font-bold text-foreground mb-4"
           >
             Featured Dishes
           </motion.h2>
@@ -74,7 +74,7 @@ const FeaturedDishes = () => {
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
             transition={{ delay: 0.2 }}
-            className="text-xl text-[#718096] max-w-[640px] mx-auto"
+            className="text-xl text-muted-foreground max-w-[640px] mx-auto"
           >
             Discover our most popular authentic Indian dishes, prepared with love and traditional recipes passed down through generations
           </motion.p>
@@ -90,7 +90,7 @@ const FeaturedDishes = () => {
           {featuredDishes.map((dish) => (
             <motion.div
               key={dish.id}
-              className="bg-white rounded-2xl overflow-hidden shadow-[0_1px_4px_rgba(0,0,0,0.1)] group"
+              className="bg-card rounded-2xl overflow-hidden shadow-[0_1px_4px_rgba(0,0,0,0.1)] group"
               variants={cardVariants}
               whileHover={{ y: -5, shadow: "0 6px 20px rgba(0,0,0,0.15)" }}
             >
@@ -114,8 +114,8 @@ const FeaturedDishes = () => {
               </div>
 
               <div className="p-6">
-                <h3 className="text-2xl font-bold text-[#2d3748] mb-2">{dish.name}</h3>
-                <p className="text-[#718096] mb-4 leading-relaxed">{dish.description}</p>
+                <h3 className="text-2xl font-bold text-foreground mb-2">{dish.name}</h3>
+                <p className="text-muted-foreground mb-4 leading-relaxed">{dish.description}</p>
                 <div className="flex items-center justify-between">
                   <span className="text-2xl font-bold text-[#dd6b20]">₹{dish.price}</span>
                   <motion.button

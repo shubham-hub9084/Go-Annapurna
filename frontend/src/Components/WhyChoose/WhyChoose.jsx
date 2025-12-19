@@ -31,7 +31,7 @@ const points = [
 
 function WhyChoose() {
   return (
-    <section className="w-full py-20 bg-gradient-to-br from-[#FFDEE9] via-[#B5FFFC] to-[#FFEDBC] bg-[length:300%_300%] rounded-b-3xl overflow-hidden animate-[gradientAnimation_15s_ease_infinite]">
+    <section className="w-full py-20 bg-gradient-to-br from-[#FFDEE9] via-[#B5FFFC] to-[#FFEDBC] dark:from-background dark:via-background dark:to-background bg-[length:300%_300%] rounded-b-3xl overflow-hidden animate-[gradientAnimation_15s_ease_infinite]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <motion.h2
@@ -39,7 +39,7 @@ function WhyChoose() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="text-4xl font-extrabold text-gray-900 mb-4 tracking-tight"
+            className="text-4xl font-extrabold text-foreground mb-4 tracking-tight"
           >
             Why Choose Go Annapurna?
           </motion.h2>
@@ -48,7 +48,7 @@ function WhyChoose() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.2, duration: 0.6 }}
-            className="text-lg text-gray-700 max-w-2xl mx-auto leading-relaxed"
+            className="text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed"
           >
             We bring you the authentic taste of India with quality ingredients and traditional cooking methods
           </motion.p>
@@ -62,7 +62,7 @@ function WhyChoose() {
               viewport={{ once: true }}
               transition={{ delay: index * 0.2, duration: 0.5 }}
               whileHover={{ y: -8, boxShadow: "0 20px 40px rgba(0,0,0,0.1)" }}
-              className="bg-white/80 backdrop-blur-sm rounded-2xl p-8 flex flex-col items-center text-center shadow-lg border border-white/50 h-full"
+              className="bg-white/80 dark:bg-card/80 backdrop-blur-sm rounded-2xl p-8 flex flex-col items-center text-center shadow-lg border border-white/50 dark:border-muted h-full"
               key={item.title}
             >
               <div className={`w-16 h-16 rounded-2xl flex items-center justify-center mb-6 bg-gradient-to-br ${item.gradient} ${item.shadow} transform rotate-3 transition-transform group-hover:rotate-6`}>
@@ -70,8 +70,8 @@ function WhyChoose() {
                   {item.icon}
                 </span>
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-4">{item.title}</h3>
-              <p className="text-gray-600 leading-relaxed text-center">
+              <h3 className="text-xl font-bold text-foreground mb-4">{item.title}</h3>
+              <p className="text-muted-foreground leading-relaxed text-center">
                 {item.desc}
               </p>
             </motion.div>

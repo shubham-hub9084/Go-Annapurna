@@ -3,6 +3,7 @@ import { Link, NavLink } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import { motion, AnimatePresence } from 'framer-motion';
 import { RiShoppingBag3Line, RiMenu3Line, RiCloseLine, RiRestaurant2Line, RiHeartLine, RiUserLine } from 'react-icons/ri';
+import { ModeToggle } from "@/Components/ui/mode-toggle"
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -14,18 +15,17 @@ const Navbar = () => {
       initial={{ y: -100, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.5, ease: "easeOut" }}
-      className="bg-white/80 backdrop-blur-md border-b border-orange-100 shadow-sm sticky top-0 z-[1000] w-full"
+      className="bg-background/80 backdrop-blur-md border-b border-orange-100 dark:border-muted shadow-sm sticky top-0 z-[1000] w-full"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
           {/* Brand */}
           <Link to="/" className="flex items-center gap-2 group" onClick={() => setIsMenuOpen(false)}>
-            <motion.span
-              whileHover={{ rotate: 20 }}
-              className="text-3xl text-orange-600"
+            <motion.div
+              className="w-12 h-12 relative z-50"
             >
-              <RiRestaurant2Line />
-            </motion.span>
+              <img src="/logo.png" alt="Logo" className="w-full h-full object-contain mix-blend-multiply dark:mix-blend-normal" />
+            </motion.div>
             <span className="text-2xl font-bold text-orange-600 tracking-wide group-hover:text-orange-700 transition-colors">Go Annapurna</span>
           </Link>
 
@@ -36,7 +36,7 @@ const Navbar = () => {
                 key={item}
                 to={item === 'Home' ? '/' : `/${item.toLowerCase()}`}
                 className={({ isActive }) =>
-                  `text-base font-semibold py-2 relative transition-colors duration-300 hover:text-orange-600 group ${isActive ? 'text-orange-600' : 'text-gray-700'}`
+                  `text-base font-semibold py-2 relative transition-colors duration-300 hover:text-orange-600 group ${isActive ? 'text-orange-600' : 'text-foreground/80'}`
                 }
               >
                 {item}
@@ -47,11 +47,12 @@ const Navbar = () => {
 
           {/* Right Side: Cart + Mobile Toggle */}
           <div className="flex items-center gap-4 sm:gap-6">
+            <ModeToggle />
 
 
             <Link
               to="/wishlist"
-              className="relative text-2xl text-gray-700 transition-all duration-300 hover:text-red-500"
+              className="relative text-2xl text-foreground transition-all duration-300 hover:text-red-500"
               onClick={() => setIsMenuOpen(false)}
             >
               <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.95 }}>
@@ -61,7 +62,7 @@ const Navbar = () => {
 
             <Link
               to="/cart"
-              className="relative text-2xl text-gray-700 transition-all duration-300 hover:text-orange-600"
+              className="relative text-2xl text-foreground transition-all duration-300 hover:text-orange-600"
               onClick={() => setIsMenuOpen(false)}
             >
               <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.95 }}>
@@ -111,7 +112,7 @@ const Navbar = () => {
             {/* Mobile Menu Button */}
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="md:hidden p-2 text-2xl text-gray-700 focus:outline-none hover:text-orange-600 transition-colors"
+              className="md:hidden p-2 text-2xl text-foreground focus:outline-none hover:text-orange-600 transition-colors"
               aria-label="Toggle menu"
             >
               {isMenuOpen ? <RiCloseLine /> : <RiMenu3Line />}
@@ -128,7 +129,7 @@ const Navbar = () => {
             animate={{ height: "auto", opacity: 1 }}
             exit={{ height: 0, opacity: 0 }}
             transition={{ duration: 0.3 }}
-            className="md:hidden overflow-hidden bg-white border-t border-orange-100 shadow-lg"
+            className="md:hidden overflow-hidden bg-background border-t border-orange-100 dark:border-muted shadow-lg"
           >
             <div className="px-4 pb-4 pt-2 space-y-2">
               {/* Mobile User Profile */}
@@ -158,7 +159,7 @@ const Navbar = () => {
                   to={item === 'Home' ? '/' : `/${item.toLowerCase()}`}
                   onClick={() => setIsMenuOpen(false)}
                   className={({ isActive }) =>
-                    `block px-4 py-3 rounded-lg text-base font-medium transition-colors hover:bg-orange-50 hover:text-orange-600 ${isActive ? 'text-orange-600 bg-orange-50' : 'text-gray-700'}`
+                    `block px-4 py-3 rounded-lg text-base font-medium transition-colors hover:bg-orange-50 hover:text-orange-600 dark:hover:bg-muted ${isActive ? 'text-orange-600 bg-orange-50 dark:bg-muted' : 'text-foreground'}`
                   }
                 >
                   {item}
