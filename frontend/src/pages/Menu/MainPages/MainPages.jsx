@@ -178,7 +178,7 @@ const MainPages = () => {
                     <motion.button
                       whileTap={{ scale: 0.9 }}
                       onClick={() => handleAddToCart(item)}
-                      className="bg-orange-600 text-white px-4 py-2 rounded-lg text-sm font-bold shadow-md shadow-orange-200 hover:bg-orange-700 hover:shadow-lg transition-all flex items-center gap-1.5"
+                      className="bg-orange-600 text-white px-4 py-2 rounded-lg text-sm font-bold shadow-md shadow-orange-200 dark:shadow-lg dark:shadow-black/40 hover:bg-orange-700 hover:shadow-lg transition-all flex items-center gap-1.5"
                     >
                       <span className="text-xs">ADD</span>
                       <RiShoppingBag3Line className="text-sm" />

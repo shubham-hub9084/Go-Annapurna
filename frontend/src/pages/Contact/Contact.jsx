@@ -129,7 +129,7 @@ const Contact = () => {
                                 <textarea rows="4" className="w-full px-4 py-3 rounded-xl bg-white dark:bg-card border border-gray-200 dark:border-border text-foreground focus:border-orange-500 focus:ring-2 focus:ring-orange-200 outline-none transition-all resize-none" placeholder=" Tell us about your experience..." />
                             </div>
 
-                            <button className="w-full bg-orange-600 text-white font-bold py-4 rounded-xl shadow-lg shadow-orange-200 hover:bg-orange-700 hover:shadow-xl transition-all flex items-center justify-center gap-2">
+                            <button className="w-full bg-orange-600 text-white font-bold py-4 rounded-xl shadow-lg shadow-orange-200 dark:shadow-lg dark:shadow-black/40 hover:bg-orange-700 hover:shadow-xl transition-all flex items-center justify-center gap-2">
                                 Send Message <RiSendPlaneFill />
                             </button>
                         </form>

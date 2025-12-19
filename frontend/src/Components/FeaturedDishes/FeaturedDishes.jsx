@@ -90,9 +90,8 @@ const FeaturedDishes = () => {
           {featuredDishes.map((dish) => (
             <motion.div
               key={dish.id}
-              className="bg-card rounded-2xl overflow-hidden shadow-[0_1px_4px_rgba(0,0,0,0.1)] group"
+              className="bg-card rounded-2xl overflow-hidden shadow-md group hover-lift"
               variants={cardVariants}
-              whileHover={{ y: -5, shadow: "0 6px 20px rgba(0,0,0,0.15)" }}
             >
               <div className="relative overflow-hidden">
                 <motion.img

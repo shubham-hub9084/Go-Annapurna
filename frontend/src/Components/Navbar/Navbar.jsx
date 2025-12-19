@@ -15,17 +15,13 @@ const Navbar = () => {
       initial={{ y: -100, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.5, ease: "easeOut" }}
-      className="bg-background/80 backdrop-blur-md border-b border-orange-100 dark:border-muted shadow-sm sticky top-0 z-[1000] w-full"
+      className="glass border-b border-orange-100 dark:border-white/5 shadow-sm sticky top-0 z-[1000] w-full"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
           {/* Brand */}
           <Link to="/" className="flex items-center gap-2 group" onClick={() => setIsMenuOpen(false)}>
-            <motion.div
-              className="w-12 h-12 relative z-50"
-            >
-              <img src="/logo.png" alt="Logo" className="w-full h-full object-contain mix-blend-multiply dark:mix-blend-normal" />
-            </motion.div>
+            <RiRestaurant2Line className="text-4xl text-orange-600 group-hover:rotate-12 transition-transform duration-300" />
             <span className="text-2xl font-bold text-orange-600 tracking-wide group-hover:text-orange-700 transition-colors">Go Annapurna</span>
           </Link>
 
@@ -103,7 +99,7 @@ const Navbar = () => {
             ) : (
               <Link
                 to="/login"
-                className="hidden md:flex items-center gap-2 px-5 py-2.5 rounded-full bg-gray-900 text-white font-bold text-sm hover:bg-orange-600 transition-colors shadow-lg shadow-gray-200 hover:shadow-orange-200"
+                className="hidden md:flex items-center gap-2 px-5 py-2.5 rounded-full bg-gray-900 text-white font-bold text-sm hover:bg-orange-600 transition-colors shadow-lg shadow-gray-200 dark:shadow-none hover:shadow-orange-200 dark:hover:shadow-none"
               >
                 Sign In
               </Link>

@@ -104,7 +104,7 @@ const Cakes = () => {
                                 <motion.button
                                     whileTap={{ scale: 0.95 }}
                                     onClick={() => handleAddToCart(cake)}
-                                    className="px-6 py-2.5 bg-gray-900 dark:bg-pink-600 text-white rounded-xl font-bold text-sm shadow-lg shadow-gray-200 dark:shadow-none hover:bg-pink-600 dark:hover:bg-pink-700 hover:shadow-pink-200 transition-all flex items-center gap-2"
+                                    className="px-6 py-2.5 bg-gray-900 dark:bg-pink-600 text-white rounded-xl font-bold text-sm shadow-lg shadow-gray-200 dark:shadow-lg dark:shadow-black/40 hover:bg-pink-600 dark:hover:bg-pink-700 hover:shadow-pink-200 dark:hover:shadow-none transition-all flex items-center gap-2"
                                 >
                                     <span>ADD</span>
                                     <RiShoppingBag3Line />

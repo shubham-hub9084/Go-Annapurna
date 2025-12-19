@@ -8,7 +8,7 @@ const points = [
     title: "Fresh Ingredients",
     desc: "We source the freshest ingredients and authentic spices directly from India to ensure every dish maintains its traditional flavor and quality.",
     gradient: "from-[rgba(255,222,233,0.7)] to-[rgba(255,154,162,0.7)]",
-    shadow: "shadow-[0_4px_12px_rgba(255,106,109,0.18),0_0.5px_2px_rgba(245,183,29,0.1)]",
+    shadow: "shadow-[0_4px_12px_rgba(255,106,109,0.18),0_0.5px_2px_rgba(245,183,29,0.1)] dark:shadow-none",
     iconColor: "text-red-500"
   },
   {
@@ -16,7 +16,7 @@ const points = [
     title: "Fast Delivery",
     desc: "Quick and reliable delivery service ensures your food arrives hot and fresh at your doorstep within 30-45 minutes of ordering.",
     gradient: "from-[rgba(181,255,252,0.7)] to-[rgba(107,233,244,0.7)]",
-    shadow: "shadow-[0_4px_12px_rgba(107,233,244,0.18),0_0.5px_2px_rgba(245,183,29,0.1)]",
+    shadow: "shadow-[0_4px_12px_rgba(107,233,244,0.18),0_0.5px_2px_rgba(245,183,29,0.1)] dark:shadow-none",
     iconColor: "text-cyan-600"
   },
   {
@@ -24,7 +24,7 @@ const points = [
     title: "Made with Love",
     desc: "Every dish is prepared with care and passion by our experienced chefs who have mastered the art of traditional Indian cooking.",
     gradient: "from-[rgba(255,237,188,0.7)] to-[rgba(255,209,102,0.7)]",
-    shadow: "shadow-[0_4px_12px_rgba(255,193,88,0.18),0_0.5px_2px_rgba(245,183,29,0.1)]",
+    shadow: "shadow-[0_4px_12px_rgba(255,193,88,0.18),0_0.5px_2px_rgba(245,183,29,0.1)] dark:shadow-none",
     iconColor: "text-yellow-600"
   },
 ];
@@ -61,8 +61,8 @@ function WhyChoose() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.2, duration: 0.5 }}
-              whileHover={{ y: -8, boxShadow: "0 20px 40px rgba(0,0,0,0.1)" }}
-              className="bg-white/80 dark:bg-card/80 backdrop-blur-sm rounded-2xl p-8 flex flex-col items-center text-center shadow-lg border border-white/50 dark:border-muted h-full"
+              whileHover={{ scale: 1.02 }}
+              className="glass-card rounded-2xl p-8 flex flex-col items-center text-center h-full hover-lift group"
               key={item.title}
             >
               <div className={`w-16 h-16 rounded-2xl flex items-center justify-center mb-6 bg-gradient-to-br ${item.gradient} ${item.shadow} transform rotate-3 transition-transform group-hover:rotate-6`}>

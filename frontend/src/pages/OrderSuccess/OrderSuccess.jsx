@@ -61,7 +61,7 @@ const OrderSuccess = () => {
                 </Link>
                 <Link
                     to="/menu"
-                    className="flex-1 flex items-center justify-center gap-2 py-4 rounded-xl bg-orange-600 text-white font-bold shadow-lg shadow-orange-200 hover:bg-orange-700 hover:scale-105 transition-all"
+                    className="flex-1 flex items-center justify-center gap-2 py-4 rounded-xl bg-orange-600 text-white font-bold shadow-lg shadow-orange-200 dark:shadow-lg dark:shadow-black/40 hover:bg-orange-700 hover:scale-105 transition-all"
                 >
                     Order More <RiArrowRightLine />
                 </Link>

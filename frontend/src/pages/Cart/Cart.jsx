@@ -125,7 +125,7 @@ const Cart = () => {
                         <motion.div
                             initial={{ opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
-                            className="bg-white dark:bg-card p-6 rounded-2xl shadow-lg border border-orange-100 dark:border-border sticky top-24"
+                            className="glass-card p-6 rounded-2xl border border-orange-100 dark:border-border sticky top-24"
                         >
                             <h2 className="text-xl font-bold text-foreground mb-6">Order Summary</h2>
 
@@ -158,7 +158,7 @@ const Cart = () => {
                                 </div>
                             </div>
 
-                            <Link to="/checkout" className="block w-full py-4 bg-gray-900 dark:bg-primary text-white dark:text-primary-foreground rounded-xl font-bold text-lg hover:bg-black transition-all shadow-xl hover:shadow-2xl active:scale-95 text-center">
+                            <Link to="/checkout" className="block w-full py-4 bg-gray-900 dark:bg-primary text-white dark:text-primary-foreground rounded-xl font-bold text-lg hover:bg-black transition-all hover-lift active:scale-95 text-center">
                                 Proceed to Checkout
                             </Link>
                             <p className="text-center text-xs text-muted-foreground mt-4">Secure Checkout Powered by Razorpay</p>

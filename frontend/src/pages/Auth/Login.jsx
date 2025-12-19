@@ -150,7 +150,7 @@ const Login = () => {
 
                         <button
                             type="submit"
-                            className="w-full flex justify-center py-4 px-4 border border-transparent rounded-xl shadow-lg shadow-orange-200 text-sm font-bold text-white bg-orange-600 hover:bg-orange-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-orange-500 transition-all hover:scale-[1.02]"
+                            className="w-full flex justify-center py-4 px-4 border border-transparent rounded-xl shadow-lg shadow-orange-200 dark:shadow-lg dark:shadow-black/40 text-sm font-bold text-white bg-orange-600 hover:bg-orange-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-orange-500 transition-all hover:scale-[1.02]"
                         >
                             Sign in
                         </button>
