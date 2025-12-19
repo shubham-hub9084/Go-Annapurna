@@ -9,7 +9,7 @@ const __dirname = path.dirname(__filename)
 
 // https://vite.dev/config/
 export default defineConfig(({ command }) => ({
-  base: command === 'build' ? "/Go-Annapurna-Food-Ordering-/" : "/",
+  base: "/",
   plugins: [react(), tailwindcss()],
   resolve: {
     alias: {
