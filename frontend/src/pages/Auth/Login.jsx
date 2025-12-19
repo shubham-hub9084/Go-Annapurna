@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
+import { authService } from "../../services/auth";
 import { RiGoogleFill, RiFacebookFill, RiMailLine, RiLockPasswordLine, RiEyeLine, RiEyeOffLine } from "react-icons/ri";
 import headerImg from "../../assets/header_img.png";
 import { useDispatch } from "react-redux";
@@ -26,22 +27,15 @@ const Login = () => {
     const handleLogin = async (e) => {
         e.preventDefault();
         try {
-            const response = await fetch('http://localhost:5000/api/login', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify(formData),
-            });
+            // Use Mock Auth Service
+            const response = await authService.login(formData.email, formData.password);
 
-            const data = await response.json();
-
-            if (response.ok) {
-                dispatch(login(data.user)); // Dispatch login action
-                alert(data.message);
+            if (response.success) {
+                dispatch(login(response.user)); // Dispatch login action
+                alert(response.message);
                 navigate("/menu");
             } else {
-                alert(data.message);
+                alert(response.message);
             }
         } catch (error) {
             console.error('Error logging in:', error);
