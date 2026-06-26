@@ -56,7 +56,7 @@ export const restaurantsData = [
         rating: 4.4,
         cost: "₹1000 for two",
         location: "MDA Colony, Moradabad",
-        image: "https://images.unsplash.com/photo-1585937421612-70a008356f36?w=800&q=80",
+        image: "https://images.unsplash.com/photo-1585937421612-70a008356fbe?w=800&q=80",
         description: "The village-themed restaurant serving rich Punjabi delicacies."
     }
 ];

@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { RiLeafLine, RiFireLine, RiHeartLine, RiRestaurant2Line } from 'react-icons/ri';
-import headerImg from '../../assets/header_img.png';
+const headerImg = "https://images.unsplash.com/photo-1585937421612-70a008356fbe?w=1600&q=80";
 import { masalaChaiImg, tandooriPlatterImg } from '../../assets/foodImages';
 
 const About = () => {

@@ -3,12 +3,13 @@ import { Link, NavLink } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import { motion, AnimatePresence } from 'framer-motion';
 import { RiShoppingBag3Line, RiMenu3Line, RiCloseLine, RiRestaurant2Line, RiHeartLine, RiUserLine } from 'react-icons/ri';
-import { ModeToggle } from "@/Components/ui/mode-toggle"
+import { ModeToggle } from "@/Components/ui/mode-toggle";
+import { useUser, UserButton } from '@clerk/react';
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const totalQuantity = useSelector((state) => state.cart.totalQuantity);
-  const user = useSelector((state) => state.auth.user);
+  const { user, isSignedIn } = useUser();
 
   return (
     <motion.nav
@@ -74,27 +75,18 @@ const Navbar = () => {
                 </motion.span>
               )}
             </Link>
-            {user ? (
+            {isSignedIn ? (
               <div className="hidden md:flex items-center gap-4">
                 <div className="flex items-center gap-3 bg-orange-50 px-4 py-2 rounded-full border border-orange-100 shadow-sm">
-                  <div className="w-8 h-8 rounded-full bg-orange-100 flex items-center justify-center text-orange-600">
-                    <RiUserLine className="text-lg" />
+                  <div className="w-8 h-8 rounded-full overflow-hidden border border-orange-200 flex items-center justify-center">
+                    <img src={user.imageUrl} alt={user.fullName || ""} className="w-full h-full object-cover" />
                   </div>
                   <div className="flex flex-col">
                     <span className="text-[10px] uppercase tracking-wider text-gray-500 font-bold leading-none">Welcome</span>
-                    <span className="text-sm font-bold text-gray-800 leading-none">{user.name}</span>
+                    <span className="text-sm font-bold text-gray-800 leading-none">{user.fullName || user.firstName}</span>
                   </div>
                 </div>
-                <button
-                  onClick={() => {
-                    localStorage.removeItem('user');
-                    window.location.reload();
-                  }}
-                  title="Logout"
-                  className="w-10 h-10 flex items-center justify-center rounded-full text-gray-400 hover:text-red-500 hover:bg-red-50 transition-all"
-                >
-                  <RiCloseLine className="text-xl" />
-                </button>
+                <UserButton afterSignOutUrl="/" />
               </div>
             ) : (
               <Link
@@ -129,23 +121,15 @@ const Navbar = () => {
           >
             <div className="px-4 pb-4 pt-2 space-y-2">
               {/* Mobile User Profile */}
-              {user && (
+              {isSignedIn && (
                 <div className="mb-4 p-3 bg-orange-50 rounded-xl border border-orange-100 flex items-center justify-between">
                   <div className="flex items-center gap-3">
-                    <div className="w-8 h-8 rounded-full bg-orange-100 flex items-center justify-center text-orange-600">
-                      <RiUserLine />
+                    <div className="w-8 h-8 rounded-full overflow-hidden border border-orange-200 flex items-center justify-center">
+                      <img src={user.imageUrl} alt={user.fullName || ""} className="w-full h-full object-cover" />
                     </div>
-                    <span className="font-bold text-gray-800">{user.name}</span>
+                    <span className="font-bold text-gray-800">{user.fullName || user.firstName}</span>
                   </div>
-                  <button
-                    onClick={() => {
-                      localStorage.removeItem('user');
-                      window.location.reload();
-                    }}
-                    className="text-xs font-bold text-red-500 bg-white px-3 py-1.5 rounded-full border border-red-100 shadow-sm"
-                  >
-                    Logout
-                  </button>
+                  <UserButton afterSignOutUrl="/" />
                 </div>
               )}
 
@@ -162,7 +146,7 @@ const Navbar = () => {
                 </NavLink>
               ))}
 
-              {!user && (
+              {!isSignedIn && (
                 <Link
                   to="/login"
                   onClick={() => setIsMenuOpen(false)}

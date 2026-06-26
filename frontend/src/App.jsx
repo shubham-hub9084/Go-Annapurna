@@ -1,5 +1,5 @@
 import React from 'react';
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, useLocation } from 'react-router-dom';
 
 import Navbar from './Components/Navbar/Navbar';
 import HeroSection from './Components/HeroSection/HeroSection';
@@ -13,13 +13,16 @@ import Contact from './pages/Contact/Contact';
 import Cart from './pages/Cart/Cart';
 import Checkout from './pages/Checkout/Checkout';
 import OrderSuccess from './pages/OrderSuccess/OrderSuccess';
-import Login from './pages/Auth/Login';
-import Signup from './pages/Auth/Signup';
+import { SignIn, SignUp } from '@clerk/react';
 import Wishlist from './pages/Wishlist/Wishlist';
 import Restaurants from './pages/Restaurants/Restaurants';
 import Cakes from './pages/Cakes/Cakes';
 
+
 const App = () => {
+  const location = useLocation();
+  const isAuthPage = location.pathname.startsWith('/login') || location.pathname.startsWith('/signup');
+
   return (
     <>
       <Navbar />
@@ -60,13 +63,27 @@ const App = () => {
         <Route path="/wishlist" element={<Wishlist />} />
 
         {/* Authentication */}
-        <Route path="/login" element={<Login />} />
-        <Route path="/signup" element={<Signup />} />
+        <Route
+          path="/login/*"
+          element={
+            <div className="flex items-center justify-center h-[calc(100vh-80px)] bg-background">
+              <SignIn routing="path" path="/login" signUpUrl="/signup" />
+            </div>
+          }
+        />
+        <Route
+          path="/signup/*"
+          element={
+            <div className="flex items-center justify-center h-[calc(100vh-80px)] bg-background">
+              <SignUp routing="path" path="/signup" signInUrl="/login" />
+            </div>
+          }
+        />
 
         {/* Cakes Page */}
         <Route path="/cakes" element={<Cakes />} />
       </Routes>
-      <Footer />
+      {!isAuthPage && <Footer />}
     </>
   );
 };

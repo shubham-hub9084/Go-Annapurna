@@ -3,9 +3,9 @@ import { useDispatch } from "react-redux";
 import { addToCart } from "../../store/cartSlice";
 import { motion } from "framer-motion";
 import { RiLeafLine, RiGobletLine, RiAddLine } from "react-icons/ri";
-import featuredDishes_1 from "../../assets/fd_1.jpg";
-import featuredDishes_2 from "../../assets/fd_2.jpg";
-import featuredDishes_3 from "../../assets/fd_3.png";
+const featuredDishes_1 = "https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?w=800&q=80";
+const featuredDishes_2 = "https://images.unsplash.com/photo-1599487488170-d11ec9c172f0?w=800&q=80";
+const featuredDishes_3 = "https://images.unsplash.com/photo-1668236543090-82eba5ee5976?w=800&q=80";
 const featuredDishes = [
   {
     id: 1,

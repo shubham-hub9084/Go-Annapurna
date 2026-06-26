@@ -2,7 +2,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
-import HeroImage from "../../assets/header_img.png";
+const HeroImage = "https://images.unsplash.com/photo-1585937421612-70a008356fbe?w=1600&q=80";
 
 const HeroSection = () => {
   const navigate = useNavigate();

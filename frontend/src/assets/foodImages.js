@@ -1,53 +1,53 @@
 // Street Food
-import paniPuriImg from "./pani_puri.jpg";
-import vadaPavImg from "./vada_pav.jpg";
-import bhelPuriImg from "./bhel_puri.jpg";
-import choleBhatureImg from "./chole_bhature.jpg";
-import dosaImg from "./dosa.jpg";
-import pavBhajiImg from "./pav_bhaji.jpg";
-import misalPavImg from "./misal_pav.jpg";
-import kathiRollImg from "./kathi_roll.jpg";
+const paniPuriImg = "https://images.unsplash.com/photo-1601050690597-df0568f70950?w=800&q=80";
+const vadaPavImg = "https://images.unsplash.com/photo-1606491956689-2ea866880c84?w=800&q=80";
+const bhelPuriImg = "https://images.unsplash.com/photo-1626132647523-66f5bf380027?w=800&q=80";
+const choleBhatureImg = "https://images.unsplash.com/photo-1589301760014-d929f3979dbc?w=800&q=80";
+const dosaImg = "https://images.unsplash.com/photo-1668236543090-82eba5ee5976?w=800&q=80";
+const pavBhajiImg = "https://images.unsplash.com/photo-1626132647523-66f5bf380027?w=800&q=80";
+const misalPavImg = "https://images.unsplash.com/photo-1606491956689-2ea866880c84?w=800&q=80";
+const kathiRollImg = "https://images.unsplash.com/photo-1585238342024-78d387f4a707?w=800&q=80";
 
 // Appetizers
-import samosaImg from "./samosa.jpg";
-import paneerTikkaImg from "./paneer_tikka.jpg";
-import dahiBhallaImg from "./dahi_bhalla.jpg";
-import chickenKebabsImg from "./chicken_kebabs.jpg";
-import onionBhajiImg from "./onion_bhaji.jpg";
+const samosaImg = "https://images.unsplash.com/photo-1601050690597-df0568f70950?w=800&q=80";
+const paneerTikkaImg = "https://images.unsplash.com/photo-1599487488170-d11ec9c172f0?w=800&q=80";
+const dahiBhallaImg = "https://images.unsplash.com/photo-1626132647523-66f5bf380027?w=800&q=80";
+const chickenKebabsImg = "https://images.unsplash.com/photo-1603360946369-dc9bb6258143?w=800&q=80";
+const onionBhajiImg = "https://images.unsplash.com/photo-1601050690597-df0568f70950?w=800&q=80";
 
 // Main Courses
-import dalMakhaniImg from "./dal_makhani.jpg";
-import palakPaneerImg from "./palak_paneer.jpg";
-import chickenTikkaMasalaImg from "./chicken_tikka_masala.jpg";
-import muttonRoganJoshImg from "./mutton_rogan_josh.jpg";
-import vegetableBiryaniImg from "./vegetable_biryani.jpg";
-import butterChickenImg from "./butter_chicken.jpg";
-import chickenBiryaniImg from "./chicken_biryani.jpg";
-import tandooriPlatterImg from "./tandoori_platter.jpg";
+const dalMakhaniImg = "https://images.unsplash.com/photo-1546833999-b9f581a1996d?w=800&q=80";
+const palakPaneerImg = "https://images.unsplash.com/photo-1613292443284-8d10ef9383fe?w=800&q=80";
+const chickenTikkaMasalaImg = "https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=800&q=80";
+const muttonRoganJoshImg = "https://images.unsplash.com/photo-1546833999-b9f581a1996d?w=800&q=80";
+const vegetableBiryaniImg = "https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?w=800&q=80";
+const butterChickenImg = "https://images.unsplash.com/photo-1603894584373-5ac82b2ae398?w=800&q=80";
+const chickenBiryaniImg = "https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?w=800&q=80";
+const tandooriPlatterImg = "https://images.unsplash.com/photo-1599487488170-d11ec9c172f0?w=800&q=80";
 
 // Desserts
-import gulabJamunImg from "./gulab_jamun.jpg";
-import rasmalaiImg from "./rasmalai.jpg";
-import gajarKaHalwaImg from "./gajar_ka_halwa.jpg";
-import kulfiImg from "./kulfi.jpg";
-import jalebiImg from "./jalebi.jpg";
+const gulabJamunImg = "https://images.unsplash.com/photo-1589301760014-d929f3979dbc?w=800&q=80";
+const rasmalaiImg = "https://images.unsplash.com/photo-1589301760014-d929f3979dbc?w=800&q=80";
+const gajarKaHalwaImg = "https://images.unsplash.com/photo-1589301760014-d929f3979dbc?w=800&q=80";
+const kulfiImg = "https://images.unsplash.com/photo-1572490122747-3968b75cc699?w=800&q=80";
+const jalebiImg = "https://images.unsplash.com/photo-1589301760014-d929f3979dbc?w=800&q=80";
 
 // Beverages
-import masalaChaiImg from "./masala_chai.jpg";
-import mangoLassiImg from "./mango_lassi.jpg";
-import freshLimeSodaImg from "./fresh_lime_soda.jpg";
-import traditionalButtermilkImg from "./traditional_buttermilk.jpg";
-import indianCoffeeImg from "./indian_coffee.jpg";
-import alooTikkiImg from "./aloo_tikki.png";
-import fishCurryImg from "./fish_curry.png";
-import chicken65Img from "./chicken_65.png";
-import malaiKoftaImg from "./malai_kofta.png";
-import masalaDosaImg from "./masala_dosa.png";
-import paneerTikkaNewImg from "./paneer_tikka_new.png";
-import butterChickenNewImg from "./butter_chicken_new.png";
-import choleBhatureNewImg from "./chole_bhature_new.png";
-import vadaPavNewImg from "./vada_pav_new.png";
-import gulabJamunNewImg from "./gulab_jamun_new.png";
+const masalaChaiImg = "https://images.unsplash.com/photo-1576092768241-dec231879fc3?w=800&q=80";
+const mangoLassiImg = "https://images.unsplash.com/photo-1572490122747-3968b75cc699?w=800&q=80";
+const freshLimeSodaImg = "https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?w=800&q=80";
+const traditionalButtermilkImg = "https://images.unsplash.com/photo-1546833999-b9f581a1996d?w=800&q=80";
+const indianCoffeeImg = "https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?w=800&q=80";
+const alooTikkiImg = "https://images.unsplash.com/photo-1589301760014-d929f3979dbc?w=800&q=80";
+const fishCurryImg = "https://images.unsplash.com/photo-1535401991746-da3d9055713e?w=800&q=80";
+const chicken65Img = "https://images.unsplash.com/photo-1610057099443-fde8c4d50f91?w=800&q=80";
+const malaiKoftaImg = "https://images.unsplash.com/photo-1546833999-b9f581a1996d?w=800&q=80";
+const masalaDosaImg = "https://images.unsplash.com/photo-1668236543090-82eba5ee5976?w=800&q=80";
+const paneerTikkaNewImg = "https://images.unsplash.com/photo-1599487488170-d11ec9c172f0?w=800&q=80";
+const butterChickenNewImg = "https://images.unsplash.com/photo-1603894584373-5ac82b2ae398?w=800&q=80";
+const choleBhatureNewImg = "https://images.unsplash.com/photo-1589301760014-d929f3979dbc?w=800&q=80";
+const vadaPavNewImg = "https://images.unsplash.com/photo-1606491956689-2ea866880c84?w=800&q=80";
+const gulabJamunNewImg = "https://images.unsplash.com/photo-1589301760014-d929f3979dbc?w=800&q=80";
 
 // Cakes (Using direct URLs for simplicity as I can't upload files, but usually would import. I'll use placeholders that resolve to Unsplash for now, or assume the user will replace them. Actually, I can use Unsplash URLs directly in the object if I don't import them. But to follow pattern, I will use consts with Unsplash URLs).
 const chocolateTruffleCakeImg = "https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=800&q=80";

@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { RiMapPinLine, RiPhoneLine, RiMailLine, RiTimeLine, RiSendPlaneFill } from 'react-icons/ri';
-import headerImg from '../../assets/header_img.png';
+import { RiPhoneLine, RiMailLine, RiTimeLine, RiSendPlaneFill } from 'react-icons/ri';
+const headerImg = "https://images.unsplash.com/photo-1585937421612-70a008356fbe?w=1600&q=80";
 
 const Contact = () => {
     useEffect(() => {
@@ -53,15 +53,6 @@ const Contact = () => {
                         </div>
 
                         <div className="grid gap-8">
-                            <div className="flex items-start gap-6 group">
-                                <div className="w-14 h-14 bg-orange-50 dark:bg-orange-900/20 text-orange-600 rounded-full flex items-center justify-center text-2xl group-hover:bg-orange-600 group-hover:text-white transition-colors duration-300 shrink-0">
-                                    <RiMapPinLine />
-                                </div>
-                                <div>
-                                    <h3 className="text-xl font-bold text-foreground mb-2">Location</h3>
-                                    <p className="text-muted-foreground">123 Marvel , <br />Thanos Home, Titan - 560038</p>
-                                </div>
-                            </div>
 
                             <div className="flex items-start gap-6 group">
                                 <div className="w-14 h-14 bg-orange-50 dark:bg-orange-900/20 text-orange-600 rounded-full flex items-center justify-center text-2xl group-hover:bg-orange-600 group-hover:text-white transition-colors duration-300 shrink-0">
@@ -135,19 +126,6 @@ const Contact = () => {
                         </form>
                     </motion.div>
                 </div>
-            </div>
-
-            {/* Map Section */}
-            <div className="w-full h-[400px] bg-gray-200 filter grayscale hover:grayscale-0 transition-all duration-700">
-                <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d124440.093409192!2d77.580643!3d12.9715987!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae1670c9b44e6d%3A0xf8dfc3e8517e4fe0!2sBengaluru%2C%20Karnataka!5e0!3m2!1sen!2sin!4v1683456789012!5m2!1sen!2sin"
-                    width="100%"
-                    height="100%"
-                    style={{ border: 0 }}
-                    allowFullScreen=""
-                    loading="lazy"
-                    referrerPolicy="no-referrer-when-downgrade"
-                ></iframe>
             </div>
         </div>
     );
